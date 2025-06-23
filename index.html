@@ -1,52 +1,67 @@
+<!-- Déclaration du type de document et définition de la langue -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Générateur d'Équipes Dynamiques</title>
-    <link rel="stylesheet" href="styles/main.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Métadonnées du document -->
+    <meta charset="UTF-8"> <!-- Encodage des caractères en UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Adaptation du contenu à la taille de l'écran -->
+    <title>Générateur d'Équipes Dynamiques</title> <!-- Titre affiché dans l'onglet du navigateur -->
+    
+    <!-- Inclusion des styles -->
+    <link rel="stylesheet" href="styles/main.css"> <!-- Feuille de styles principale -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet"> <!-- Police Roboto depuis Google Fonts -->
 </head>
 <body>
+    <!-- Conteneur principal -->
     <div class="container">
+        <!-- En-tête de la page -->
         <header>
-            <h1>Générateur d'Équipes Dynamiques</h1>
-            <p class="subtitle">Créez des groupes de travail aléatoires pour vos ateliers collaboratifs</p>
+            <h1>Générateur d'Équipes Dynamiques</h1> <!-- Titre principal -->
+            <p class="subtitle">Créez des groupes de travail aléatoires pour vos ateliers collaboratifs</p> <!-- Sous-titre -->
         </header>
 
+        <!-- Section principale -->
         <main>
+            <!-- Section pour entrer les données -->
             <section class="input-section">
-                <h2>Liste des participants</h2>
+                <h2>Liste des participants</h2> <!-- Titre de la section -->
                 <div class="input-container">
+                    <!-- Zone de texte pour entrer les noms des participants -->
                     <textarea id="participants-input" placeholder="Entrez les noms des participants, un par ligne ou séparés par des virgules"></textarea>
                 </div>
                 <div class="controls">
+                    <!-- Contrôle pour définir la taille des équipes -->
                     <div class="team-size-control">
-                        <label for="team-size">Taille des équipes:</label>
-                        <input type="number" id="team-size" min="2" value="4">
+                        <label for="team-size">Taille des équipes:</label> <!-- Étiquette pour l'entrée -->
+                        <input type="number" id="team-size" min="2" value="4"> <!-- Champ pour entrer la taille des équipes -->
                     </div>
+                    <!-- Boutons pour générer ou réinitialiser les équipes -->
                     <button id="generate-btn" class="btn primary">Générer les équipes</button>
                     <button id="reset-btn" class="btn secondary">Réinitialiser</button>
                 </div>
             </section>
 
+            <!-- Section pour afficher les résultats -->
             <section class="results-section">
-                <h2>Résultats</h2>
+                <h2>Résultats</h2> <!-- Titre de la section -->
                 <div id="teams-container" class="teams-container">
                     <!-- Les équipes générées apparaîtront ici -->
                 </div>
                 <div class="actions">
+                    <!-- Boutons pour exporter ou copier les résultats -->
                     <button id="export-btn" class="btn">Exporter en CSV</button>
                     <button id="copy-btn" class="btn">Copier les résultats</button>
                 </div>
             </section>
         </main>
 
+        <!-- Pied de page -->
         <footer>
-            <p>© 2023 Plateforme Collaborative - Outil de génération d'équipes</p>
+            <p>© 2023 Plateforme ccCollaborative - Outil de génération d'équipes</p> <!-- Copyright -->
         </footer>
     </div>
 
+    <!-- Inclusion du script JavaScript -->
     <script src="scripts/app.js"></script>
 </body>
 </html>
