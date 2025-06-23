@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>application Generateur de groupe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+      <h1>Générateur de Groupes de Travail</h1>
+
+        <form id="formulaire-groupes">
+    <label for="participants">Liste des participants :</label><br>
+    <textarea id="participants" name="participants" rows="8" placeholder="Entrez un nom par ligne..."></textarea><br><br>
+    <label for="groupSize"> 4 participants par groupe :</label><br>
+    <input type="number" id="groupSize" name="groupSize" min="1" value="3"><br><br>
+    <button type="button" id="generer">Créer les groupes</button>
+  </form>
+  <div id="groupes">
+    <!-- Les groupes générés s'afficheront ici -->
+  </div>
+
+  <!-- Lien vers le fichier JavaScript (à ajouter par un autre membre) -->
+  <script src="script.js"></script>
+</body>
+</html>
+
+</body>
+</html>
